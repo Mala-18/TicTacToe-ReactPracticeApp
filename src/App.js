@@ -3,7 +3,7 @@ import Square from './Square.js';
 
 function App() {
   return(
-    <>
+    <div className="app">
       <div className="board-row">
         <Square/>
         <Square/>
@@ -19,7 +19,7 @@ function App() {
         <Square/>
         <Square/>
       </div>
-    </>
+    </div>
   );
 }
 
