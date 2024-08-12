@@ -1,8 +1,0 @@
-import {useState} from 'react';
-import './Square.css';
-
-function Square({value, onSquareClick}){
-    return <button classname="square" onClick={onSquareClick}>{value}</button>
-}
-
-export default Square;

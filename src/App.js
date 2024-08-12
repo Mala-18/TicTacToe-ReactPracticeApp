@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-import Square from './Square.js';
+
+function Square({value, onSquareClick}){
+  return (
+      <button classname="square" onClick={onSquareClick}>{value}</button>
+  )
+}
 
 function App() {
-  const[square, setSquare] = useState(Array(9).fill(null));
+  const [square, setSquare] = useState(Array(9).fill(null));
 
   function handleClick(i){
     const nextSquare = square.splice();
@@ -12,23 +17,23 @@ function App() {
   }
 
   return(
-    <div className="app">
+    <>
       <div className="board-row">
-        <Square onSquareClick={() => handleClick(1)} value={square[1]}/>
-        <Square onSquareClick={() => handleClick(2)} value={square[2]}/>
-        <Square onSquareClick={() => handleClick(3)} value={square[3]}/>
+        <Square value={square[0]} onSquareClick={() => handleClick(0)} />
+        <Square value={square[1]} onSquareClick={() => handleClick(1)} />
+        <Square value={square[2]} onSquareClick={() => handleClick(2)} />
       </div>
       <div className="board-row">
-        <Square onSquareClick={() => handleClick(4)} value={square[4]}/>
-        <Square onSquareClick={() => handleClick(5)} value={square[5]}/>
-        <Square onSquareClick={() => handleClick(6)} value={square[6]}/>
+        <Square value={square[3]} onSquareClick={() => handleClick(3)} />
+        <Square value={square[4]} onSquareClick={() => handleClick(4)} />
+        <Square value={square[5]} onSquareClick={() => handleClick(5)} />
       </div>
       <div className="board-row">
-        <Square onSquareClick={() => handleClick(7)} value={square[7]}/>
-        <Square onSquareClick={() => handleClick(8)} value={square[8]}/>
-        <Square onSquareClick={() => handleClick(9)} value={square[9]}/>
+        <Square value={square[6]} onSquareClick={() => handleClick(6)} />
+        <Square value={square[7]} onSquareClick={() => handleClick(7)} />
+        <Square value={square[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </div>
+    </>
   );
 }
 
