@@ -1,10 +1,26 @@
-.square{
-  background-color: beige;
-  border-radius: 0%;
-  border: 1px solid blue;
-}
-.board-row{
-  margin: 0;
-  padding: 0;
+.main-app{
+  width: 100%;
+  height: 100%;
 }
 
+.board-row{
+  width: 75px;
+  display: flex;
+  margin: 0% 50%;
+}
+
+.status{
+  font-size: 10px;
+  margin: 2% 45%;
+}
+
+.square{
+  margin: 0;
+  padding: 1px 6px;
+  font-size: 15px;
+  background-color: bisque;
+  width:25px;
+  height: 20px;
+  border: 0.01px dotted black;
+  flex-direction: row;
+}

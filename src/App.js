@@ -3,7 +3,7 @@ import './App.css';
 
 function Square({value, onSquareClick}){
   return (
-      <button classname="square" onClick={onSquareClick}>{value}</button>
+      <div className="square" onClick={onSquareClick}>{value}</div>
   )
 }
 
@@ -57,7 +57,7 @@ function App() {
   }
 
   return(
-    <>
+    <div className='main-app'>
       <div className='status'>{status}</div>    
       <div className="board-row">
         <Square value={square[0]} onSquareClick={() => handleClick(0)} />
@@ -74,7 +74,7 @@ function App() {
         <Square value={square[7]} onSquareClick={() => handleClick(7)} />
         <Square value={square[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 }
 
